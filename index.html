@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 Datáfonos en Oferta Exclusiva | El Búho 89 | Acepta Tarjetas HOY</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Variables */
+        :root {
+            --buho-dark: #1A1A1A;
+            --buho-gold: #FFC300;
+            --buho-red: #E94560;
+            --whatsapp-green: #25D366;
+            --font-family-primary: 'Montserrat', sans-serif;
+            --background-light: #F9F9F9;
+            --shadow-base: 0 4px 15px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --transition-duration: 0.3s;
+        }
+
+        /* Estilos Base */
+        body {
+            background-color: var(--background-light);
+            color: var(--buho-dark);
+            font-family: var(--font-family-primary);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Contenedores */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Sticky Alert Bar - ALERTA DE ENVÍO */
+        .shipping-alert-bar {
+            background-color: var(--buho-red);
+            color: white;
+            text-align: center;
+            padding: 10px 20px;
+            font-weight: 700;
+            font-size: 0.9em;
+            position: sticky;
+            top: 0;
+            z-index: 1000; /* Asegura que esté encima de todo */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Encabezado */
+        header {
+            background-color: var(--buho-dark);
+            color: white;
+            padding: 40px 5%;
+            text-align: center;
+            border-bottom: 7px solid var(--buho-gold);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: clamp(2em, 4vw, 3em);
+            margin-bottom: 15px;
+            color: var(--buho-gold);
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+        header p {
+            font-size: clamp(1em, 1.5vw, 1.2em);
+            color: var(--buho-red);
+            font-weight: 700;
+            padding: 15px 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 15px auto 0;
+        }
+
+        /* Barra de Acciones y Confianza Superior (NUEVO) */
+        .top-action-bar {
+            background-color: white;
+            padding: 15px 5%;
+            text-align: center;
+            border-bottom: 1px solid #DDD;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .top-btn {
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: all var(--transition-duration);
+            text-transform: uppercase;
+            font-size: 0.9em;
+            border: 2px solid;
+        }
+        .btn-register {
+            background-color: var(--buho-gold);
+            color: var(--buho-dark);
+            border-color: var(--buho-gold);
+        }
+        .btn-register:hover {
+            background-color: #e0ac00;
+            transform: translateY(-2px);
+        }
+        .btn-web {
+            background-color: white;
+            color: var(--buho-dark);
+            border-color: var(--buho-dark);
+        }
+        .btn-web:hover {
+            background-color: var(--buho-dark);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Grid de Productos */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            padding: 60px 5%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* Tarjeta de Producto */
+        .product-card {
+            background: white;
+            border: 1px solid #EEE;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: var(--shadow-base);
+            transition: transform var(--transition-duration) ease-out, box-shadow var(--transition-duration) ease-out;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* ... Estilos de etiquetas, imágenes, precios (sin cambios significativos) ... */
+        .discount-tag {
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background-color: var(--buho-red);
+            color: white;
+            padding: 8px 40px;
+            font-weight: 900;
+            font-size: 1.1em;
+            transform: rotate(45deg);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+            z-index: 10;
+            text-transform: uppercase;
+        }
+        .product-card img {
+            max-width: 90%;
+            height: auto;
+            max-height: 250px;
+            border-radius: 10px;
+            margin: 10px auto 25px;
+            transition: transform var(--transition-duration);
+            object-fit: contain;
+        }
+        .product-card h2 {
+            font-size: 2em;
+            color: var(--buho-dark);
+            margin-top: 0;
+            margin-bottom: 8px;
+            font-weight: 900;
+        }
+        .description {
+            color: #666;
+            font-size: 1em;
+            min-height: 50px;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+        .price-section {
+            margin-bottom: 25px;
+            border-top: 1px dashed #DDD;
+            padding-top: 15px;
+        }
+        .price-normal {
+            display: block;
+            color: #A0A0A0;
+            text-decoration: line-through;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        .price-offer {
+            display: block;
+            color: var(--buho-red);
+            font-size: 3em;
+            font-weight: 900;
+            line-height: 1;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Control de Cantidad (NUEVO) */
+        .quantity-control {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            gap: 10px;
+        }
+        .quantity-control input {
+            width: 60px;
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #CCC;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+
+        /* Botón Añadir al Carrito (NUEVO) */
+        .add-to-cart-button {
+            display: block;
+            background-color: var(--buho-dark);
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1em;
+            transition: all var(--transition-duration);
+            margin-top: auto;
+            border: none;
+            cursor: pointer;
+        }
+        .add-to-cart-button:hover {
+            background-color: #444;
+            transform: translateY(-2px);
+        }
+
+        /* Floating Cart Button (NUEVO) */
+        .floating-cart-button {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: var(--whatsapp-green);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.5em;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            z-index: 1001;
+            transition: transform var(--transition-duration);
+        }
+        .floating-cart-button:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+        .cart-count {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: var(--buho-red);
+            color: white;
+            border-radius: 50%;
+            padding: 5px 8px;
+            font-size: 0.7em;
+            font-weight: 900;
+        }
+
+        /* Modal Carrito (NUEVO) */
+        .cart-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: none; /* Se oculta por defecto */
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+        .cart-modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 90%;
+            width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        .cart-modal-content h3 {
+            border-bottom: 2px solid var(--buho-gold);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            color: var(--buho-dark);
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px dashed #EEE;
+        }
+        .cart-item-info {
+            flex-grow: 1;
+            text-align: left;
+        }
+        .cart-item-name {
+            font-weight: 700;
+        }
+        .cart-total {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 2px solid var(--buho-dark);
+            font-size: 1.5em;
+            font-weight: 900;
+            display: flex;
+            justify-content: space-between;
+        }
+        .checkout-button {
+            background-color: var(--whatsapp-green);
+            color: white;
+            display: block;
+            text-align: center;
+            padding: 15px;
+            text-decoration: none;
+            border-radius: 50px;
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: 900;
+            transition: background-color 0.3s;
+        }
+        .checkout-button:hover {
+            background-color: #1DA851;
+        }
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 2em;
+            cursor: pointer;
+            color: #666;
+            transition: color 0.3s;
+        }
+        .close-modal:hover {
+            color: var(--buho-red);
+        }
+        #cart-items-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Cookie Consent Bar (NUEVO) */
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--buho-dark);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1500;
+            font-size: 0.9em;
+        }
+        .cookie-consent button {
+            background-color: var(--buho-gold);
+            color: var(--buho-dark);
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 700;
+            transition: opacity 0.3s;
+        }
+        .cookie-consent button:hover {
+            opacity: 0.8;
+        }
+
+        /* Pie de Página - Disclaimer MEJORADO */
+        footer {
+            background-color: var(--buho-dark);
+            color: #AAA;
+            text-align: center;
+            padding: 40px 5%;
+            font-size: 0.9em;
+            border-top: 5px solid var(--buho-gold);
+        }
+        .disclaimer-section {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            margin-top: 30px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .disclaimer-title {
+            color: var(--buho-gold);
+            font-weight: 700;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .disclaimer-section ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        .disclaimer-section li {
+            margin-bottom: 8px;
+        }
+        .juan-signature {
+            margin-top: 15px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.85em;
+        }
+
+        /* RESPONSIVIDAD */
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            .shipping-alert-bar {
+                font-size: 0.85em;
+            }
+            .cookie-consent {
+                flex-direction: column;
+                gap: 10px;
+                padding-bottom: 70px; /* Espacio para el botón flotante */
+            }
+            .floating-cart-button {
+                bottom: 20px; /* Lo ponemos más abajo en móvil */
+                right: 50%;
+                transform: translateX(50%);
+            }
+        }
+    </style>
+    </head>
+<body>
+
+    <div class="shipping-alert-bar">
+        ⚠️  **AVISO IMPORTANTE:** Los tiempos de envío son superiores a los normales por la alta solicitud de productos. Agradecemos tu paciencia y preferencia.
+
+    </div>
+
+    <header>
+        <h1>¡BASTA DE EFECTIVO! DATÁFONOS EN REMATE</h1>
+        <p>🔴 ¡No seas el negocio que sigue perdiendo ventas!</p>
+    </header>
+
+    <div class="top-action-bar">
+        <a href="https://bold.co/registro" target="_blank" class="top-btn btn-register">
+            <i class="fas fa-user-plus"></i> Regístrate en Bold
+        </a>
+        <a href="https://bold.co/ingreso" target="_blank" class="top-btn btn-web">
+            <i class="fas fa-sign-in-alt"></i> Ingresar a la Web
+        </a>
+        <a href="#productos" class="top-btn btn-web">
+            <i class="fas fa-credit-card"></i> Ver Datáfonos
+        </a>
+    </div>
+    
+    <main class="products-grid" id="productos">
+        <div class="product-card" data-id="1" data-name="Datáfono NEO" data-price="49000">
+            <span class="discount-tag">¡38% DE DESCUENTO!</span>
+            <img src="https://datafonos.bold.co/wp-content/uploads/2024/09/Neo-1-585x1024.png" alt="Datáfono NEO">
+            <h2>Datáfono NEO</h2>
+            <p class="description">El inicio del camino para dejar de ser un cavernícola financiero. Compacto y letal contra el efectivo. Se conecta a tu celular.</p>
+            <div class="price-section">
+                <span class="price-normal">Precio Regular: $79.000</span>
+                <span class="price-offer">$49.000</span>
+            </div>
+            <div class="quantity-control">
+                <label for="qty-1">Cantidad:</label>
+                <input type="number" id="qty-1" value="1" min="1">
+            </div>
+            <button class="add-to-cart-button" onclick="addToCart('1')">
+                <i class="fas fa-cart-plus"></i> Añadir al Carrito
+            </button>
+        </div>
+
+        <div class="product-card" data-id="2" data-name="Datáfono PLUS" data-price="99000">
+            <span class="discount-tag">¡33% DE DESCUENTO!</span>
+            <img src="https://datafonos.bold.co/wp-content/uploads/2024/09/Plus-1-585x1024.png" alt="Datáfono PLUS">
+            <h2>Datáfono PLUS</h2>
+            <p class="description">El escalón al éxito. Más rápido, más elegante y con teclado propio. Ideal para negocios que ya venden algo decente.</p>
+            <div class="price-section">
+                <span class="price-normal">Precio Regular: $149.000</span>
+                <span class="price-offer">$99.000</span>
+            </div>
+            <div class="quantity-control">
+                <label for="qty-2">Cantidad:</label>
+                <input type="number" id="qty-2" value="1" min="1">
+            </div>
+            <button class="add-to-cart-button" onclick="addToCart('2')">
+                <i class="fas fa-cart-plus"></i> Añadir al Carrito
+            </button>
+        </div>
+        
+        <div class="product-card" data-id="3" data-name="Datáfono SMART" data-price="259000">
+            <span class="discount-tag">¡13% DE DESCUENTO!</span>
+            <img src="https://datafonos.bold.co/wp-content/uploads/2024/09/Smart-1-585x1024.png" alt="Datáfono SMART con pantalla táctil">
+            <h2>Datáfono SMART</h2>
+            <p class="description">Pantalla táctil, autonomía (funciona sin celular) y la envidia de tus competidores. Ya eres un profesional, admítelo.</p>
+            <div class="price-section">
+                <span class="price-normal">Precio Regular: $299.000</span>
+                <span class="price-offer">$259.000</span>
+            </div>
+            <div class="quantity-control">
+                <label for="qty-3">Cantidad:</label>
+                <input type="number" id="qty-3" value="1" min="1">
+            </div>
+            <button class="add-to-cart-button" onclick="addToCart('3')">
+                <i class="fas fa-cart-plus"></i> Añadir al Carrito
+            </button>
+        </div>
+        
+        <div class="product-card" data-id="4" data-name="SMART PRO (Con SIM)" data-price="399000">
+            <span class="discount-tag">¡EL MEJOR! 13% OFF</span>
+            <img src="https://datafonos.bold.co/wp-content/uploads/2024/09/Smart-Pro-585x1024.png" alt="Datáfono SMART PRO CON SIM">
+            <h2>SMART PRO (Con SIM)</h2>
+            <p class="description">El rey. Imprime recibos, no depende del WiFi de nadie. Libertad financiera sin interrupciones. ¡Ideal para domicilios!</p>
+            <div class="price-section">
+                <span class="price-normal">Precio Regular: $459.000</span>
+                <span class="price-offer">$399.000</span>
+            </div>
+            <div class="quantity-control">
+                <label for="qty-4">Cantidad:</label>
+                <input type="number" id="qty-4" value="1" min="1">
+            </div>
+            <button class="add-to-cart-button" onclick="addToCart('4')">
+                <i class="fas fa-cart-plus"></i> Añadir al Carrito
+            </button>
+        </div>
+
+        <div class="product-card" data-id="5" data-name="SMART PRO (WiFi)" data-price="359000">
+            <span class="discount-tag">¡10% DE DESCUENTO!</span>
+            <img src="https://datafonos.bold.co/wp-content/uploads/2024/09/Smart-Pro-585x1024.png" alt="Datáfono SMART PRO WiFi">
+            <h2>SMART PRO (WiFi)</h2>
+            <p class="description">Similar al rey, pero depende de tu WiFi. Ideal si no te gusta pagar planes de datos. Imprime recibos en el punto de venta.</p>
+            <div class="price-section">
+                <span class="price-normal">Precio Regular: $399.000</span>
+                <span class="price-offer">$359.000</span>
+            </div>
+            <div class="quantity-control">
+                <label for="qty-5">Cantidad:</label>
+                <input type="number" id="qty-5" value="1" min="1">
+            </div>
+            <button class="add-to-cart-button" onclick="addToCart('5')">
+                <i class="fas fa-cart-plus"></i> Añadir al Carrito
+            </button>
+        </div>
+
+        <div class="product-card" data-id="6" data-name="Promo: Neo + SMART" data-price="269000">
+            <span class="discount-tag">¡EXCLUSIVO!</span>
+            <img src="https://datafonos.bold.co/wp-content/uploads/2024/09/Neo-1-585x1024.png" alt="Datafono Neo + Datafono Smart">
+            <h2>Promo: Neo + SMART</h2>
+            <p class="description">Tu camino al Éxito. Estos 2 Datáfonos pueden ser tuyos a un precio de locura.</p>
+            <div class="price-section">
+                <span class="price-normal">Precio Regular: $378.000</span>
+                <span class="price-offer">$269.000</span>
+            </div>
+            <div class="quantity-control">
+                <label for="qty-6">Cantidad:</label>
+                <input type="number" id="qty-6" value="1" min="1">
+            </div>
+            <button class="add-to-cart-button" onclick="addToCart('6')">
+                <i class="fas fa-cart-plus"></i> Añadir al Carrito
+            </button>
+        </div>
+
+    </main>
+
+    <button class="floating-cart-button" onclick="toggleCartModal()">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cart-count">0</span>
+    </button>
+
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close-modal" onclick="toggleCartModal()">&times;</span>
+            <h3>Tu Carrito de Compras</h3>
+            <ul id="cart-items-list">
+                <li id="empty-cart-message" style="text-align: center; color: #666;">El carrito está vacío.</li>
+            </ul>
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">$0</span>
+            </div>
+            <a href="#" id="checkout-link" class="checkout-button" target="_blank" onclick="closeCartModalAndRedirect()">
+                <i class="fab fa-whatsapp"></i> Pagar y Finalizar Compra
+            </a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>El que duda, paga el precio completo. **¡Ofertas válidas por tiempo limitado!**</p>
+            
+            <div class="disclaimer-section">
+                <p class="disclaimer-title"><i class="fas fa-balance-scale"></i> Descargo de Responsabilidad (Disclaimer)</p>
+                <ul>
+                    <li>EL BUHO 89 ™ es un **Distribuidor Autorizado e Independiente** de Bold. Las promociones aquí mostradas son exclusivas de EL BUHO 89 . ORG S.A.S y **NO son responsabilidad de Bold**.</li>
+                    <li>**Garantía:** Todos los datáfonos cuentan con garantía de 1 año por defectos de fábrica (directa con Bold).</li>
+                    <li>**Envíos:** El envío nacional está sujeto a existencias. Los tiempos de entrega pueden ser mayores a lo habitual debido a la alta demanda.</li>
+                    <li>**Medio de Pago:** Para la compra de uno o varios datáfonos, el pago se gestiona a través de una pasarela de Bold (Checkout), cuyo link es **generado de forma personalizada** por nuestros asesores al contactar por WhatsApp.</li>
+                    <li>**Tarifas de Transacción:** Las comisiones de venta (tarifas) son establecidas y cobradas directamente por Bold. Consulta las tarifas vigentes antes de finalizar la compra.</li>
+                </ul>
+            </div>
+            <a href="https://bold.co/tarifas" target="_blank" style="color: var(--buho-gold); text-decoration: none; font-weight: 700;">
+                <i class="fas fa-file-invoice-dollar"></i> Ver Tarifas Oficiales de Bold
+            </a>
+
+            <p class="juan-signature">Desarrollado con la calidad de EL BUHO 89 . ORG SAS™</p>
+        </div>
+    </footer>
+
+    <div class="cookie-consent" id="cookie-consent-bar">
+        <p>Este sitio utiliza cookies para garantizar la mejor experiencia de usuario. Al continuar, aceptas el uso de cookies.</p>
+        <button onclick="acceptCookies()">Aceptar y Cerrar</button>
+    </div>
+
+    <script>
+        // Variables globales
+        let cart = [];
+        const productsData = {}; // Para almacenar la información del producto por ID
+
+        // 1. Inicialización: Cargar datos de los productos
+        document.querySelectorAll('.product-card').forEach(card => {
+            const id = card.getAttribute('data-id');
+            productsData[id] = {
+                id: id,
+                name: card.getAttribute('data-name'),
+                price: parseInt(card.getAttribute('data-price'))
+            };
+        });
+
+        // 2. Lógica del Carrito
+        function addToCart(productId) {
+            const quantity = parseInt(document.getElementById(`qty-${productId}`).value);
+            const productInfo = productsData[productId];
+            
+            // Buscar si el producto ya está en el carrito
+            const existingItemIndex = cart.findIndex(item => item.id === productId);
+
+            if (existingItemIndex > -1) {
+                // Si existe, actualiza la cantidad
+                cart[existingItemIndex].quantity = quantity;
+            } else {
+                // Si no existe, agrégalo
+                cart.push({
+                    id: productId,
+                    name: productInfo.name,
+                    price: productInfo.price,
+                    quantity: quantity
+                });
+            }
+            
+            updateCartDisplay();
+            // Mostrar modal al añadir el primer producto (opcional)
+            if(cart.length === 1) {
+                 toggleCartModal();
+            }
+        }
+
+        function updateCartDisplay() {
+            const cartList = document.getElementById('cart-items-list');
+            const cartCount = document.getElementById('cart-count');
+            const cartTotal = document.getElementById('cart-total-price');
+            let total = 0;
+            let totalItems = 0;
+
+            cartList.innerHTML = '';
+            
+            // Eliminar productos con cantidad 0 o negativos
+            cart = cart.filter(item => item.quantity > 0);
+
+            if (cart.length === 0) {
+                cartList.innerHTML = '<li id="empty-cart-message" style="text-align: center; color: #666; font-style: italic;">El carrito está vacío.</li>';
+                cartTotal.textContent = '$0';
+                cartCount.textContent = '0';
+                return;
+            }
+
+            cart.forEach(item => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+                totalItems += item.quantity;
+                
+                const listItem = document.createElement('li');
+                listItem.classList.add('cart-item');
+                listItem.innerHTML = `
+                    <div class="cart-item-info">
+                        <span class="cart-item-name">${item.quantity}x ${item.name}</span>
+                        <p style="margin: 0; font-size: 0.9em; color: #999;">$${item.price.toLocaleString('es-CO')} c/u</p>
+                    </div>
+                    <span class="cart-item-price">$${subtotal.toLocaleString('es-CO')}</span>
+                `;
+                cartList.appendChild(listItem);
+            });
+
+            cartTotal.textContent = `$${total.toLocaleString('es-CO')}`;
+            cartCount.textContent = totalItems.toString();
+            document.getElementById('checkout-link').href = generateWhatsAppLink(total);
+        }
+        
+        // 3. Lógica del Modal
+        function toggleCartModal() {
+            const modal = document.getElementById('cart-modal');
+            modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+            updateCartDisplay(); // Refresca el contenido cada vez que se abre
+        }
+        
+        function closeCartModalAndRedirect() {
+            // Cierra el modal antes de redirigir (necesario para navegadores móviles)
+            document.getElementById('cart-modal').style.display = 'none';
+        }
+
+        // 4. Generación del Link de WhatsApp para Checkout
+        function generateWhatsAppLink(total) {
+            let message = "Hola, El Búho 89. Quiero realizar el siguiente pedido:\n\n";
+            
+            cart.forEach(item => {
+                message += `- ${item.quantity}x ${item.name} ($${(item.price * item.quantity).toLocaleString('es-CO')})\n`;
+            });
+
+            message += `\n*TOTAL ESTIMADO: $${total.toLocaleString('es-CO')}*\n\n`;
+            message += "Por favor, ayúdame a generar el link de pago único de Bold para esta orden. ¡Gracias!";
+            
+            // Número de WhatsApp (ejemplo, reemplazar por el real si es necesario)
+            const whatsappNumber = "573330446668"; 
+            
+            return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        }
+
+        // 5. Lógica de Cookies
+        function checkCookieConsent() {
+            if (localStorage.getItem('cookieConsent') === 'accepted') {
+                document.getElementById('cookie-consent-bar').style.display = 'none';
+            }
+        }
+
+        function acceptCookies() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            document.getElementById('cookie-consent-bar').style.display = 'none';
+        }
+
+        // Ejecutar al cargar la página
+        window.onload = function() {
+            checkCookieConsent();
+        };
+
+    </script>
+</body>
+</html>
